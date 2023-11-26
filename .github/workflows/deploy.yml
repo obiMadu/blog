@@ -18,19 +18,6 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - name: Cache Hugo resources
-              uses: actions/cache@v3
-              env:
-                  cache-name: cache-hugo-resources
-              with:
-                  path: resources
-                  key: ${{ env.cache-name }}
-
-            - uses: actions/setup-go@v4
-              with:
-                  go-version: "^1.17.0"
-            - run: go version
-
             - name: Setup Hugo
               uses: peaceiris/actions-hugo@v2
               with:
