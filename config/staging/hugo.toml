@@ -1,0 +1,2 @@
+# Config baseurl for staging environment
+baseurl = "https://stage.blog.obimadu.pro"
