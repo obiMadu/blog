@@ -37,10 +37,10 @@ jobs:
       contents: write
     steps:          
       - name: Setup Algolia
-        run: apt install tar &&\
+        run: sudo apt install tar &&\
              wget https://github.com/algolia/cli/releases/download/v${{secrets.ALGOLIA_VERSION}}/algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz &&\
              tar -xf algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz && cd algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64 &&\
-             cp algolia /usr/local/bin &&\
+             sudo cp algolia /usr/local/bin &&\
              algolia profile add --name "default" --app-id "${{secrets.ALGOLIA_APPID}}" --admin-api-key "${{secrets.ALGOLIA_SEARCHKEY}}" --default
              
       - name: Upload Index
