@@ -1,9 +1,7 @@
-name: Deploy to gh-pages
+name: Deploy
 
 on:
     push:
-        branches: [main]
-    pull_request:
         branches: [main]
 
 jobs:
@@ -27,11 +25,19 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify     
+
+      - name: Download Algolia CLI
+        run: wget https://github.com/algolia/cli/releases/download/v${{secrets.ALGOLIA_VERSION}}/algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz
+
+      - name: Install Algolia CLI
+        run: tar -xf algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz && cd algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64 && sudo cp algolia /usr/local/bin
+    
+      - name: Upload Index
+        run: algolia objects update blog -F ./public/index.json --wait --application-id "${{secrets.ALGOLIA_APPID}}" --admin-api-key "${{secrets.ALGOLIA_ADMINKEY}}"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
