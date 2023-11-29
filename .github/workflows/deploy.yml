@@ -1,13 +1,11 @@
-name: Deploy to gh-pages
+name: Deploy
 
 on:
     push:
         branches: [main]
-    pull_request:
-        branches: [main]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
@@ -36,11 +34,10 @@ jobs:
         run: tar -xf algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz && cd algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64 && sudo cp algolia /usr/local/bin
     
       - name: Upload Index
-        run: algolia objects update blog -F ./public/index.json --wait --application-id "${{secrets.ALGOLIA_APPID}}" --admin-api-key "${{secrets.ALGOLIA_SEARCHKEY}}"
+        run: algolia objects update blog -F ./public/index.json --wait --application-id "${{secrets.ALGOLIA_APPID}}" --admin-api-key "${{secrets.ALGOLIA_ADMINKEY}}"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
