@@ -42,7 +42,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     weight = 1
     identifier = "projects"
     # you can add extra information before the name (HTML format is supported), such as icons
-    pre = "<i class='fa-solid fa-cloud-meatball'></i>"
+    pre = "<i class='fa-regular fa-folder-open'></i>"
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
     name = " Projects"
@@ -52,7 +52,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [[menu.main]]
     weight = 2
     identifier = "tutorials"
-    pre = "<i class='fa-solid fa-server'></i>"
+    pre = "<i class='fa-regular fa-newspaper'></i>"
     post = ""
     name = " Tutorials"
     url = "/categories/tutorials/"
@@ -104,7 +104,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # title name
       name = ""
       # you can add extra information before the name (HTML format is supported), such as icons
-      pre = "<i class='fa-regular fa-newspaper'></i>"
+      pre = "<i class='fa-brands fa-leanpub'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       post = ""
       #  whether to use typeit animation for title name
