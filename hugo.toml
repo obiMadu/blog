@@ -49,22 +49,30 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     url = "/categories/projects/"
     # title will be shown when you hover on this menu link
     title = "Projects"
-  [[menu.main]]
-    weight = 2
-    identifier = "tipsntricks"
-    pre = "<i class='fa-solid fa-wand-magic-sparkles'></i>"
-    post = ""
-    name = " Tips & Tricks"
-    url = "/categories/tipsntricks/"
-    title = "Tips & Tricks"
-  [[menu.main]]
+[[menu.main]]
     weight = 3
     identifier = "web"
     pre = "<i class='fa-solid fa-server'></i>"
     post = ""
     name = " Web Articles"
     url = "/categories/web/"
-    title = "Web Articles"
+    title = "Web Articles"  
+  [[menu.main]]
+    weight = 2
+    identifier = "tutorials"
+    pre = "<i class='fa-solid fa-server'></i>"
+    post = ""
+    name = " Tutorials"
+    url = "/categories/tutorials/"
+    title = "Tutorials"
+  [[menu.main]]
+    weight = 3
+    identifier = "tipsntricks"
+    pre = "<i class='fa-solid fa-wand-magic-sparkles'></i>"
+    post = ""
+    name = " Tips & Tricks"
+    url = "/categories/tipsntricks/"
+    title = "Tips & Tricks"
   [[menu.main]]
     weight = 4
     identifier = "tags"
@@ -104,7 +112,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # title name
       name = ""
       # you can add extra information before the name (HTML format is supported), such as icons
-      pre = ""
+      pre = "<i class='fa-regular fa-newspaper'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       post = ""
       #  whether to use typeit animation for title name
