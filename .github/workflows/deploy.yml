@@ -37,7 +37,7 @@ jobs:
       contents: write
     steps:          
       - name: Setup Algolia
-        run: sudo apt install tar &&\
+        run: sudo apt update && sudo apt install tar wget &&\
              wget https://github.com/algolia/cli/releases/download/v${{secrets.ALGOLIA_VERSION}}/algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz &&\
              tar -xf algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz && cd algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64 &&\
              sudo cp algolia /usr/local/bin &&\
