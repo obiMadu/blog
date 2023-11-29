@@ -41,8 +41,8 @@ jobs:
       - run: tar -xf algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz && cd algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64 && sudo cp algolia /usr/local/bin
       - run: algolia profile add --name "default" --app-id "${{secrets.ALGOLIA_APPID}}" --admin-api-key "${{secrets.ALGOLIA_SEARCHKEY}}" --default
              
-      - name: Upload Index
-        run: algolia objects update blog -F ./public/index.json --wait
+      # - name: Upload Index
+      #   run: algolia objects update blog -F ./public/index.json --wait
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
