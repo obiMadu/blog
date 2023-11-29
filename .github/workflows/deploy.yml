@@ -37,7 +37,7 @@ jobs:
       contents: write
     steps:          
       - name: Setup Algolia
-        run: /usr/bin/wget https://github.com/algolia/cli/releases/download/v${{secrets.ALGOLIA_VERSION}}/algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz \
+        run: /usr/bin/wget https://github.com/algolia/cli/releases/download/v${{secrets.ALGOLIA_VERSION}}/algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz &&\
              /usr/bin/tar -xf algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64.tar.gz && cd algolia_${{secrets.ALGOLIA_VERSION}}_linux_amd64 &&\
              sudo cp algolia /usr/local/bin &&\
              algolia profile add --name "default" --app-id "${{secrets.ALGOLIA_APPID}}" --admin-api-key "${{secrets.ALGOLIA_SEARCHKEY}}" --default
