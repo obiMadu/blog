@@ -40,15 +40,15 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 [menu]
   [[menu.main]]
     weight = 1
-    identifier = "cloud"
+    identifier = "projects"
     # you can add extra information before the name (HTML format is supported), such as icons
     pre = "<i class='fa-solid fa-cloud-meatball'></i>"
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = " Cloud Articles"
-    url = "/categories/cloud/"
+    name = " Projects"
+    url = "/categories/projects/"
     # title will be shown when you hover on this menu link
-    title = "Cloud Articles"
+    title = "Projects"
   [[menu.main]]
     weight = 2
     identifier = "tipsntricks"
