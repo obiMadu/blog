@@ -1,13 +1,13 @@
-name: Deploy
+name: Stage
 
 on:
     push:
-        branches: [main]
+        branches: [staging]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: production
+    environment: staging
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
@@ -25,8 +25,8 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build
-        run: hugo --minify     
+      - name: Build (Staging)
+        run: hugo --minify --environment 'staging'     
 
       - name: Download Algolia CLI
         run: wget https://github.com/algolia/cli/releases/download/v${{vars.ALGOLIA_VERSION}}/algolia_${{vars.ALGOLIA_VERSION}}_linux_amd64.tar.gz
@@ -37,9 +37,9 @@ jobs:
       - name: Upload Index
         run: algolia objects update blog -F ./public/index.json --wait --application-id "${{secrets.ALGOLIA_APPID}}" --admin-api-key "${{secrets.ALGOLIA_ADMINKEY}}"
 
-      - name: Deploy
+      - name: Deploy (Staging)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname: blog.obimadu.pro
+          cname: stage.blog.obimadu.pro
