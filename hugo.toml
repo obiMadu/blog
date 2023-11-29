@@ -49,14 +49,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     url = "/categories/projects/"
     # title will be shown when you hover on this menu link
     title = "Projects"
-[[menu.main]]
-    weight = 3
-    identifier = "web"
-    pre = "<i class='fa-solid fa-server'></i>"
-    post = ""
-    name = " Web Articles"
-    url = "/categories/web/"
-    title = "Web Articles"  
   [[menu.main]]
     weight = 2
     identifier = "tutorials"
