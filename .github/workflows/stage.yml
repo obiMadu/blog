@@ -44,4 +44,4 @@ jobs:
           external_repository: obiMadu/blog-staging
           publish_dir: ./public
           publish_branch: gh-pages
-          cname: stage.blog.obimadu.pro
+          cname: stage.obimadu.pro
