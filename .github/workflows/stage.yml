@@ -5,7 +5,7 @@ on:
         branches: [staging]
 
 jobs:
-  deploy:
+  stage:
     runs-on: ubuntu-latest
     environment: staging
     permissions:
