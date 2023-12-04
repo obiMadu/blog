@@ -1,3 +1,6 @@
 [submodule "themes/loveit"]
 	path = themes/loveit
 	url = git@github.com:obiMadu/loveit.git
+[submodule "content/posts"]
+	path = content/posts
+	url = git@github.com:obiMadu/blog-content
