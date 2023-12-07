@@ -76,7 +76,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [[menu.main]]
     weight = 5
     identifier = "github"
-    pre = "<i class="fa-brands fa-github"></i>"
+    pre = "<i class='fa-brands fa-github'></i>"
     post = ""
     name = ""
     url = "https://github.com/obiMadu"
