@@ -102,7 +102,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # URL of the LOGO
       logo = ""
       # title name
-      name = "Weblog"
+      name = "Obi.M"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = "<i class='fa-brands fa-leanpub'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
