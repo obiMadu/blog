@@ -14,7 +14,7 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.PAT }} #Optional. This is only required of you have to fetch from a repository other than this one.
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -39,6 +39,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: ${{ vars.STAGE_REPO }}
+          external_repository: ${{ vars.EXT_REPO }}
           publish_dir: ./public
           cname: ${{ vars.CNAME }}
