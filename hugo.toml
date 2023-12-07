@@ -73,6 +73,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     name = " Tags"
     url = "/tags/"
     title = "Tags"
+  [[menu.main]]
+    weight = 5
+    identifier = "github"
+    pre = "<i class='fa-brands fa-github'></i>"
+    post = ""
+    name = ""
+    url = "https://github.com/obiMadu"
+    title = "Github"
 
 [params]
   # site default theme ["auto", "light", "dark"]
