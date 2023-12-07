@@ -3,9 +3,11 @@
 
 ![Project Workflow](workflow.png)
 
-#### I have attempted to make this project as modular as possible, such that one could deploy their own site/blog from it.
+I finally decided to make a blog worthy of a DevOps Engineer. Here it is, my Hugo blog build and deployed via CI/CD (Github Actions) across dev, staging and production environments (via Github Environments). My blogging journey has been a really long one, from Blogger.com to Wordpress.com, to Wordpress.org. After a plethora of plugins, cracked and free alike, i fell in-love with static site generators. After Jekyll here I am enjoying Hugo.
 
-#### This project is hosted in it's different environments as follows:
+I have attempted to make this project as modular as possible, such that (after going through the readme carefully) one could deploy their own site/blog from it.
+
+## Project Links:
 
 - [Blog - Production](https://blog.obimadu.pro) <br>
 - [Blog - Staging](https://blog-stage.obimadu.pro)
