@@ -173,7 +173,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [params.search]
     enable = true
     # type of search engine ["lunr", "algolia"]
-    type = "lunr"
+    type = "algolia"
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
@@ -187,9 +187,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #  whether to use the absolute URL based on the baseURL in search index
     absoluteURL = false
     [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
+      index = "blog"
+      appID = "KTNX71IWSK"
+      searchKey = "f0aeaa3d1b95c15de165144ca344eafa"
 
   # Home page config
   [params.home]
