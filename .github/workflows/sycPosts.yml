@@ -19,4 +19,4 @@ jobs:
             git submodule update --remote
             git add .
             git commit -m "sync posts"
-            git push
+            git push -f
