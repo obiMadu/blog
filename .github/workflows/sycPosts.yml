@@ -1,0 +1,22 @@
+name: Sync Posts
+
+on: 
+  workflow_dispatch: 
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: staging
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          token: ${{ secrets.PAT }} #Optional. This is only required of you have to fetch from a repository other than this one.
+      - run: |
+            git config user.name Obi.M
+            git config user.email mail@obimadu.pro
+            git update submodule --remote
+            git add .
+            git commit -m "sync posts"
+            git push -f origin staging
