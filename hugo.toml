@@ -430,8 +430,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # Waline comment config
       [params.page.comment.waline]
         enable = true
-        serverURL = "https://comments.obimadu.pro"
-        el = "#waline"
+        lang = 'en'
+        serverURL = 'https://comments.obimadu.pro'
+        el = '#waline'
       # Facebook comment config
       [params.page.comment.facebook]
         enable = false
