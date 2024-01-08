@@ -427,6 +427,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         # you can store your own data files in the same path under your project:
         # "assets/lib/valine/emoji/"
         emoji = ""
+      # Waline comment config
+      [params.page.comment.waline]
+        enable = true
+        serverURL = "https://comments.obimadu.pro"
+        el = "#waline"
       # Facebook comment config
       [params.page.comment.facebook]
         enable = false
@@ -481,17 +486,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         # located in "assets/"
         # Or
         # someCSS = "https://cdn.example.com/some.css"
-
-        # waline comments css
-        walineCSS = "https://unpkg.com/@waline/client@v3/dist/waline.css"
       [params.page.library.js]
         # someJavascript = "some.js"
         # located in "assets/"
         # Or
         # someJavascript = "https://cdn.example.com/some.js"
-
-        # waline comments js
-        walineJS = "waline.js"
     #  Page SEO config
     [params.page.seo]
       # image URL
