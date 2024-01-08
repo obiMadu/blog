@@ -433,7 +433,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         lang = "en"
         serverURL = "https://comments.obimadu.pro"
         el = "#waline"
-        js = "https://unpkg.com/@waline/client/dist/waline.js"
+        js = "https://unpkg.com/@waline/client@v2/dist/waline.js"
       # Facebook comment config
       [params.page.comment.facebook]
         enable = false
