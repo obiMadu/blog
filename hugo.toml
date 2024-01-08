@@ -481,12 +481,17 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         # located in "assets/"
         # Or
         # someCSS = "https://cdn.example.com/some.css"
+
+        # waline comments css
         walineCSS = "https://unpkg.com/@waline/client@v3/dist/waline.css"
       [params.page.library.js]
         # someJavascript = "some.js"
         # located in "assets/"
         # Or
         # someJavascript = "https://cdn.example.com/some.js"
+
+        # waline comments js
+        walineJS = "waline.js"
     #  Page SEO config
     [params.page.seo]
       # image URL
