@@ -435,6 +435,12 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         el = "#waline"
         js = "https://unpkg.com/@waline/client/dist/waline.js"
         css = "https://unpkg.com/@waline/client/dist/waline.css"
+        dark = "auto"
+        reaction = true
+        requiredMeta = ["nick"]
+        wordLimit = 150
+        copyright = false
+        recaptchaV3Key = "6LdWEkspAAAAALv0D9-Wy3PTo8Rr89XjImg0NLcQ"
       # Facebook comment config
       [params.page.comment.facebook]
         enable = false
