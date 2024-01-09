@@ -35,7 +35,7 @@ jobs:
       - name: Upload Index
         run: |
               cat ./public/index.json | jq -c '.[]' > index.ndjson 
-              algolia objects update blog -F index.ndjson --wait --application-id "${{secrets.ALGOLIA_APPID}}" --admin-api-key "${{secrets.ALGOLIA_ADMINKEY}}"
+              algolia objects update blog -F index.ndjson --wait -C --create-if-not-exists --application-id "${{secrets.ALGOLIA_APPID}}" --admin-api-key "${{secrets.ALGOLIA_ADMINKEY}}"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
