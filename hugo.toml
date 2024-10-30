@@ -31,12 +31,6 @@ enableEmoji = true
 # ignore some build errors
 ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
-# Author config
-[author]
-name = "Obi Madu"
-email = "hello@obimadu.pro"
-link = "https://obimadu.pro"
-
 # Menu config
 [menu]
 [[menu.main]]
@@ -99,6 +93,12 @@ title = "Obi.M's Weblog"
 description = "👋 Hello, I'm Obi. I write about modern IT Infrastructure (cloud, devOps, containerization, etc). Read my blog to view some of my amazing projects & tutorials."
 # website images for Open Graph and Twitter Cards
 images = ["/images/avatar.webp"]
+
+# Author config
+[author]
+name = "Obi Madu"
+email = "hello@obimadu.pro"
+link = "https://obimadu.pro"
 
 # Header config
 [params.header]
