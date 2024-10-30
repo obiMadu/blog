@@ -95,7 +95,7 @@ description = "👋 Hello, I'm Obi. I write about modern IT Infrastructure (clou
 images = ["/images/avatar.webp"]
 
 # Author config
-[author]
+[params.author]
 name = "Obi Madu"
 email = "hello@obimadu.pro"
 link = "https://obimadu.pro"
